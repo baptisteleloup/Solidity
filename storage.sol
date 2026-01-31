@@ -25,10 +25,10 @@ contract Storage{
         return MyFavoriteNumber;
     }
 
-    function addPerson(uint8 _favNumber, string calldata _name) public {
+    function addPerson(uint8 _favNumber, string calldata _name) public { //Calldata because I don't modify the _name
         listOfPeople.push(Person(_favNumber, _name));
         NameToFavoriteNumber[_name] = _favNumber;
-        
+
     }
 }
 
